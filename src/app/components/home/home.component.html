@@ -1,5 +1,5 @@
 <!--The body of the home page-->
-<div style="text-align:center" xmlns="">
+<div style="text-align:center" xmlns="" class="mainContent">
   <div class="container-fluid" style="padding-top: 5px">
     <div class="jumbotron">
       <h1 class="d-none d-md-block">
@@ -8,26 +8,42 @@
       <h3 class="d-md-none">
         The countdown to the <b>'{{title}}'</b> release begins!!
       </h3>
-      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fheartandsoulradio%2Fvideos%2F10155261211262600%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+      <div class="wrapper">
+        <div class="h_iframe">
+          <!-- a transparent image is preferable -->
+          <img class="ratio" src="http://placehold.it/16x9"/>
+          <iframe class="fb-video" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fheartandsoulradio%2Fvideos%2F10155261211262600%2F&show_text=0" frameborder="0" allowFullScreen></iframe>
+        </div>
+      </div>
 
       <img class="albumArt" src="../../../assets/img/LostOnMeAlbumCover.jpg" />
       <div class="row text-center" id="myCounter"></div>
 
-      <h2>References in case we get stuck:</h2>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-        </li>
-        <li class="nav-item">
-          <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-        </li>
-        <li class="nav-item">
-          <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-        </li>
-      </ul>
+
     </div>
   </div>
 </div>
 <script>
+  // Find all iframes
+  var $iframes = $( "iframe.fb-video" );
 
+  // Find &#x26; save the aspect ratio for all iframes
+  $iframes.each(function () {
+    $( this ).data( "ratio", this.height / this.width )
+    // Remove the hardcoded width &#x26; height attributes
+      .removeAttr( "width" )
+      .removeAttr( "height" );
+  });
+
+  // Resize the iframes when the window is resized
+  $( window ).resize( function () {
+    $iframes.each( function() {
+      // Get the parent container&#x27;s width
+      var width = $( this ).parent().width();
+      $( this ).width( width )
+        .height( width * $( this ).data( "ratio" ) );
+    });
+// Resize to fix all iframes on page load.
+  }).resize();
 </script>
+

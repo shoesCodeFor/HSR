@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "assets/counter/mb-comingsoon.css"
+        "assets/counter/mb-comingsoon.css",
+        "assets/fonts/font-awesome/css/font-awesome.min.css"
       ],
       "scripts": [
         "assets/counter/jquery.mb-comingsoon.min.js"
