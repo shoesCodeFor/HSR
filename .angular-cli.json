@@ -20,11 +20,9 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "assets/compiled/flipclock.css",
         "assets/counter/mb-comingsoon.css"
       ],
       "scripts": [
-        "assets/compiled/flipclock.js",
         "assets/counter/jquery.mb-comingsoon.min.js"
       ],
       "environmentSource": "environments/environment.ts",
