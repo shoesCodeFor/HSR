@@ -57,7 +57,8 @@
         <li class="nav-item"><i style="top:5px; padding-top: 12.5px;" id="navPlay" class="fa fa-fw fa-play-circle fa-2x" aria-hidden="true"></i></li>
         <li class="nav-item"><i id="navFF" class="fa fa-fast-forward" aria-hidden="true" style="padding-top: 15px;"></i></li>
       </ul>
-      <iframe id="sc-widget" width="100%" height="200" scrolling="yes" frameborder="yes" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/heart-soul-radio/sets/thieves&amp;artwork=false"></iframe>
+
+      <iframe id="sc-widget" width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/343407907&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
       <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
       <script type="text/javascript">
         (function(){
@@ -67,20 +68,30 @@
             widget       = SC.Widget(widgetIframe),
             newSoundUrl = 'https://soundcloud.com/heart-soul-radio/sets/thieves&artwork=false';
           widget.bind(SC.Widget.Events.PAUSE, function(){
-            $("#soundBars").hide();
-            $("#navPlay").toggleClass("fa-play-circle fa-2x");
-            $("#navPlay").toggleClass("fa-pause");
+            // $("#soundBars").hide();
+             $("#navPlay").removeClass("fa-pause");
+              $("#navPlay").addClass("fa-play-circle fa-2x");
+
+              $("#soundBars").hide();
+
+
           });
           widget.bind(SC.Widget.Events.PLAY, function(){
-            $("#soundBars").show();
-            $("#navPlay").toggleClass("fa-play-circle fa-2x");
-            $("#navPlay").toggleClass("fa-pause");
+
+              $("#soundBars").show();
+              $("#navPlay").removeClass("fa-play-circle fa-2x");
+              $("#navPlay").addClass("fa-pause");
 
           });
           widget.bind(SC.Widget.Events.READY, function() {
             // load new widget
-
+            var counterNext = 0;
             $("#navFF").click(function(){
+
+              if(!counterNext){
+                $('#sc-widget').attr('src', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/50275460&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true');
+              counterNext++;
+              }
               widget.next();
             });
             $("#navREW").click(function(){
