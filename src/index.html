@@ -12,6 +12,26 @@
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
     crossorigin="anonymous"></script>
+  <!-- Facebook Pixel Code -->
+
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1702349536740423');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1"
+         src="https://www.facebook.com/tr?id=1702349536740423&ev=PageView
+&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
 <body>
 
@@ -71,17 +91,12 @@
             // $("#soundBars").hide();
              $("#navPlay").removeClass("fa-pause");
               $("#navPlay").addClass("fa-play-circle fa-2x");
-
               $("#soundBars").hide();
-
-
           });
           widget.bind(SC.Widget.Events.PLAY, function(){
-
               $("#soundBars").show();
               $("#navPlay").removeClass("fa-play-circle fa-2x");
               $("#navPlay").addClass("fa-pause");
-
           });
           widget.bind(SC.Widget.Events.READY, function() {
             // load new widget
@@ -150,7 +165,6 @@
       $("#sc-widget").toggle();
       $("#navPlayerRight").toggle();
     });
-
   </script>
 </footer>
 </body>
