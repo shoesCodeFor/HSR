@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { StoreComponent } from './components/store/store.component';
+import { MusicComponent } from './components/music/music.component';
 
 
 const appRoutes: Routes = [
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    StoreComponent
+    StoreComponent,
+    MusicComponent
   ],
   imports: [
     BrowserModule,
