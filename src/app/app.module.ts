@@ -10,11 +10,11 @@ import { MusicComponent } from './components/music/music.component';
 
 
 const appRoutes: Routes = [
-   {path: '', component: HomeComponent},
-   {path: 'about', component: AboutComponent},
-   {path: 'music', component: HomeComponent},
+    {path: '', component: HomeComponent},
+    {path: 'about', component: AboutComponent},
+    {path: 'music', component: MusicComponent},
     {path: 'shop', component: StoreComponent},
-    {path: 'store', component:StoreComponent}
+    {path: 'store', component: StoreComponent}
   ];
 
 @NgModule({
