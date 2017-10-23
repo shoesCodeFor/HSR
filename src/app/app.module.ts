@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { StoreComponent } from './components/store/store.component';
 import { MusicComponent } from './components/music/music.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 const appRoutes: Routes = [
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     StoreComponent,
-    MusicComponent
+    MusicComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
