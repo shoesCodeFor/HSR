@@ -8,6 +8,8 @@ import { AboutComponent } from './components/about/about.component';
 import { StoreComponent } from './components/store/store.component';
 import { MusicComponent } from './components/music/music.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { MetaComponent } from './components/meta/meta.component';
+import { FreebiesComponent } from './components/freebies/freebies.component';
 
 
 const appRoutes: Routes = [
@@ -15,7 +17,8 @@ const appRoutes: Routes = [
     {path: 'about', component: AboutComponent},
     {path: 'music', component: MusicComponent},
     {path: 'shop', component: StoreComponent},
-    {path: 'store', component: StoreComponent}
+    {path: 'store', component: StoreComponent},
+    {path: 'freebies', component: FreebiesComponent}
   ];
 
 @NgModule({
@@ -25,7 +28,9 @@ const appRoutes: Routes = [
     AboutComponent,
     StoreComponent,
     MusicComponent,
-    NavbarComponent
+    NavbarComponent,
+    MetaComponent,
+    FreebiesComponent
   ],
   imports: [
     BrowserModule,
