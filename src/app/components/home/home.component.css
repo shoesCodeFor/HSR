@@ -1,7 +1,3 @@
-
-#myCounter{
-  padding-top: 20px;
-}
 .albumArt{
   margin-top: 20px;
   width: 70%;
@@ -17,12 +13,26 @@
   margin-top:20px;
 }
 
+#desktopPlayer{
+  margin-top: 70px;
+}
 
-.wrapper         {width:80%;height:100%;margin:0 auto;background:#CCC}
-.h_iframe        {position:relative;}
-.h_iframe .ratio {display:block;width:100%;height:auto;}
-.h_iframe iframe {position:absolute;top:0;left:0;width:100%; height:100%;}
+
+#homeLander{
+  background-image: url("../../../assets/img/reelBackground.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .mainContent{
   padding-bottom:50px;
 }
+
+#myCounter{
+  padding-top: 20px;
+}
+
+
+
+

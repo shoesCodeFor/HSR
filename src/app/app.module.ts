@@ -10,6 +10,9 @@ import { MusicComponent } from './components/music/music.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MetaComponent } from './components/meta/meta.component';
 import { FreebiesComponent } from './components/freebies/freebies.component';
+import { SpotifyPlayerComponent } from './components/spotify-player/spotify-player.component';
+import { FbPromoComponent } from './components/fb-promo/fb-promo.component';
+import { AlbumArtComponent } from './components/album-art/album-art.component';
 
 
 const appRoutes: Routes = [
@@ -30,7 +33,10 @@ const appRoutes: Routes = [
     MusicComponent,
     NavbarComponent,
     MetaComponent,
-    FreebiesComponent
+    FreebiesComponent,
+    SpotifyPlayerComponent,
+    FbPromoComponent,
+    AlbumArtComponent
   ],
   imports: [
     BrowserModule,

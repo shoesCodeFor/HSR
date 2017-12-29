@@ -1,3 +1,37 @@
+<!-- Full Width Home Page -->
+<div class="continer-fluid" id="homeLander">
+    <div class="row justify-content-center">
+
+        <div id="desktopPlayer" class="col text-center d-none d-md-block">
+          <app-spotify-player></app-spotify-player>
+        </div>
+        <div class="col-sm-4 text-center order-xs-first">
+
+            <h1 class="">
+              <b>'{{title}}'</b> out now!
+            </h1>
+            <app-album-art></app-album-art>
+            <div class="row justify-content-center">
+              <a href="https://geo.itunes.apple.com/us/album/lost-on-me-ep/id1294042301?app=itunes" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/en-us/itunes-lrg.svg) no-repeat;width:200px;height:80px;background-size:contain;margin-top:20px;"></a>
+            </div>
+
+            <div class="row justify-content-center">
+              <a href="https://geo.itunes.apple.com/us/album/lost-on-me-ep/id1294042301?app=itunes">
+                <img class="albumArt" src="../../../assets/img/LostOnMeAlbumCover.jpg" />
+              </a>
+            </div>
+            <div class="row justify-content-center">
+              <a href="https://goo.gl/oKAURM"><img id="buyOnGooglePlay" src="../../../assets/img/googlePlay.png"/></a>
+            </div>
+
+        </div>
+        <div class="col-sm text-center d-none d-md-block">
+          <app-fb-promo></app-fb-promo>
+        </div>
+
+    </div>
+</div>
+
 <!--The body of the home page-->
 <div style="text-align:center" xmlns="" class="mainContent">
   <div class="container-fluid" style="padding-top: 5px">
@@ -19,18 +53,15 @@
       </div>
       <!-- Spotify Embed -->
       <br>
-      <iframe src="https://open.spotify.com/embed/album/6O33TDJrbjpqQSKp9TjuoD" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+      <div class="d-none d-sm-block d-md-none">
+        <app-spotify-player></app-spotify-player>
+      </div>
+
       <div class="row justify-content-center">
         <p>No Spotify? No Problem, click on the HSR logo to play our music directly from this page.</p>
       </div>
       <div class="container">
-        <div class="wrapper">
-          <div class="h_iframe">
-            <!-- a transparent image is preferable -->
-            <img class="ratio" src="http://placehold.it/16x9"/>
-            <iframe class="fb-video" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fheartandsoulradio%2Fvideos%2F10155282657142600%2F&show_text=0" frameborder="0" allowFullScreen></iframe>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
